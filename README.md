@@ -30,7 +30,9 @@ To test the sample:
  2. From function path [functions/gcf-render-template/](functions/gcf-render-template/) execute:
  ```
  export FUNCTION_NAME="gcf-form-template";
- gcloud beta functions deploy ${FUNCTION_NAME} --entry-point execute --memory 128MB --runtime python37 --trigger-http;
+ export PATH_FILE="gcf-form-template.html";
+ export BUCKET_NAME="gcf-static-files";
+ gcloud beta functions deploy ${FUNCTION_NAME} --entry-point execute --set-env-vars BUCKET_NAME=${BUCKET_NAME},PATH_FILE=${PATH_FILE} --memory 128MB --runtime python37 --trigger-http;
  ```
  3. Return something like that:
 ```

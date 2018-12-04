@@ -3,7 +3,7 @@
 This sample demonstrates how to render a template form from Google Storage using Cloud Functions.
 
 
-## Functions Code
+## Functions Code  
 
 Form Template
 See file [functions/gcf-form-template/main.py](functions/gcf-form-template/main.py) for the code.
